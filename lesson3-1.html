@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+       function createArr() { //point a.
+           var A = [0];
+           var n = +prompt("Array Length");
+           for (var i = 0; i < n; i++)
+               A[i] = i + 1;
+           return A;
+       }
+       function sumArr(A) { //point b.
+           var S = 0;
+           for (var i = 0; i < A.length; i++)
+               S = S + A[i];
+           return S;
+       }
+       function maxElem(A) {
+           var max = A[0];
+           for (var i = 1; i < A.length; i++)
+               if(A[i] > max) {
+                   max = A[i];
+               }
+           return max;
+       }
+       function minElem(A) {
+           var min = A[0];
+           for (var i = 1; i < A.length; i++)
+               if(A[i] < min) {
+                   min = A[i];
+               }
+           return min;
+       }
+       function evenArr(A) {
+           var B = [0];
+           var j = 0;
+           for (var i = 0; i < A.length; i++) {
+               if ((A[i] % 2) === 0) {
+                   B[j] = A[i];
+                   j++;
+               }
+           }
+           return B;
+       }
+       // begin
+
+       var A = createArr();
+       //alert(A);
+       // alert(sumArr(A));
+       //alert(maxElem(A));
+       //alert(minElem(A));
+       //alert(evenArr(A));
+   </script>
+</body>
+
+</html>
